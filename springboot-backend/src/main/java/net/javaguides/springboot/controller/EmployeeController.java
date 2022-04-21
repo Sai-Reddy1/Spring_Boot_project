@@ -33,7 +33,7 @@ public class EmployeeController {
 		return new ResponseEntity<Employee>(employeeService.saveEmployee(employee), HttpStatus.CREATED);
 	}
 	
-	// build get all employees REST API
+	// build get all employees List REST API
 	@GetMapping
 	public List<Employee> getAllEmployees(){
 		return employeeService.getAllEmployees();
