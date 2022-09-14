@@ -26,7 +26,7 @@ public class EmployeeController {
 		super();
 		this.employeeService = employeeService;
 	}
-	
+	// build create employee REST API
 	// build create employee REST API
 	@PostMapping()
 	public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee){
@@ -59,7 +59,7 @@ public class EmployeeController {
 	@DeleteMapping("{id}")
 	public ResponseEntity<String> deleteEmployee(@PathVariable("id") long id){
 		
-		// delete employee from DB
+		// delete employee from DB List
 		employeeService.deleteEmployee(id);
 		
 		return new ResponseEntity<String>("Employee deleted successfully!.", HttpStatus.OK);
